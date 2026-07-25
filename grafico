@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+
+# Data
+categories = ['Preço sem impostos', 'Com impostos atuais', 'Com impostos maiores (nova alíquota)']
+values = [100, 156, 180]  # em % do preço original
+
+# Plot
+plt.figure(figsize=(8,5))
+plt.bar(categories, values, color=['gray','orange','red'])
+plt.title('Impacto do aumento de impostos sobre produtos importados')
+plt.ylabel('Preço final (% do valor original)')
+plt.ylim(0, 220)
+plt.text(0, 100+3, 'Base 100%', ha='center')
+plt.text(1, 156+3, '156%', ha='center')
+plt.text(2, 180+3, '180%', ha='center')
+plt.show()
